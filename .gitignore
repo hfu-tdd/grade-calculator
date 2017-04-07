@@ -1,0 +1,20 @@
+# IntelliJ
+.idea
+*.iml
+
+# Gradle
+.gradle
+build
+
+# OS generated files
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Logs
+logs
+*.log
+/gradlew
+/gradlew.bat
+/gradle/
