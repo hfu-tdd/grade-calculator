@@ -1,6 +1,6 @@
 package ch.tdd;
 
-public class Calculator {
+public class GradeCalculator {
 
     public int calculate(int i) {
         return i;
