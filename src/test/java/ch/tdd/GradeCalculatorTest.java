@@ -27,4 +27,11 @@ public class GradeCalculatorTest {
 
         assertEquals(2.5, result, 0.0);
     }
+
+    @Test
+    public void calculcateAverage_threeGrades() throws Exception {
+        double result = gradeCalculator.calculate(2, 3, 5);
+
+        assertEquals(3.33, result, 0.01);
+    }
 }
