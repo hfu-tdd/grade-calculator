@@ -14,11 +14,11 @@ public class GradeCalculator {
         return sumOfGrades / grades.length;
     }
 
-    public double calculateWeighted(double v, int i) {
-        return v;
+    public double calculateWeighted(WeightedGrade weightedGrade) {
+        return weightedGrade.getGrade();
     }
 
-    public double calculateWeighted(double grade1, int weight1, double grade2, int weight2) {
-        return ((grade1 * weight1) + (grade2 * weight2)) / (weight1 + weight2);
+    public double calculateWeighted(WeightedGrade weightedGrade, WeightedGrade weightedGrade1) {
+        return ((weightedGrade.getGrade() * weightedGrade.getCreditPoints()) + (weightedGrade1.getGrade() * weightedGrade1.getCreditPoints())) / (weightedGrade.getCreditPoints() + weightedGrade1.getCreditPoints());
     }
 }
