@@ -34,4 +34,11 @@ public class GradeCalculatorTest {
 
         assertEquals(3.33, result, 0.01);
     }
+
+    @Test
+    public void calculateAverage_twoOddGrades() throws Exception {
+        double result = gradeCalculator.calculateMultiple(2.3, 1.7);
+
+        assertEquals(2.0, result, 0.0);
+    }
 }

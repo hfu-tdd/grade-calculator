@@ -6,9 +6,9 @@ public class GradeCalculator {
         return calculateMultiple(i);
     }
 
-    public double calculateMultiple(int... grades) {
+    public double calculateMultiple(double... grades) {
         double sumOfGrades = 0.0;
-        for (int grade : grades) {
+        for (double grade : grades) {
             sumOfGrades += grade;
         }
         return sumOfGrades / grades.length;
