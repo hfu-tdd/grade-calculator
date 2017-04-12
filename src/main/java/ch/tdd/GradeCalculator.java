@@ -2,12 +2,8 @@ package ch.tdd;
 
 public class GradeCalculator {
 
-    public int calculate(int i) {
-        return i;
-    }
-
-    public double calculate(int i, int v) {
-        return (double)(i + v) / 2;
+    public double calculate(int i) {
+        return calculateMultiple(i);
     }
 
     public double calculateMultiple(int... grades) {
