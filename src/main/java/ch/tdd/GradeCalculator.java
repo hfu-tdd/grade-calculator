@@ -18,7 +18,7 @@ public class GradeCalculator {
         double result = 0.0;
         int totalCreditPoints = 0;
         for (WeightedGrade grade : weightedGrade) {
-            result += grade.getWeightedGrade();
+            result += grade.getValue();
             totalCreditPoints += grade.getCreditPoints();
         }
         return result / totalCreditPoints;
