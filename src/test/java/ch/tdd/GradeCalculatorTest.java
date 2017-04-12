@@ -30,7 +30,7 @@ public class GradeCalculatorTest {
 
     @Test
     public void calculcateAverage_threeGrades() throws Exception {
-        double result = gradeCalculator.calculate(2, 3, 5);
+        double result = gradeCalculator.calculateMultiple(2, 3, 5);
 
         assertEquals(3.33, result, 0.01);
     }

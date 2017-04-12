@@ -10,11 +10,7 @@ public class GradeCalculator {
         return (double)(i + v) / 2;
     }
 
-    public double calculate(int i, int i1, int i2) {
-        return calculateMultiple(i, i1, i2);
-    }
-
-    private double calculateMultiple(int... grades) {
+    public double calculateMultiple(int... grades) {
         double sumOfGrades = 0.0;
         for (int grade : grades) {
             sumOfGrades += grade;
