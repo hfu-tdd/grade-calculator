@@ -9,21 +9,14 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class GradeCalculatorTest {
-
-    private GradeCalculator gradeCalculator;
-
-    @Before
-    public void setUp() throws Exception {
-        gradeCalculator = new GradeCalculator();
-    }
+public class TableOfRecordsTest {
 
     @Test
     public void calculateAverage_onlyOneGrade() {
         final List<WeightedGrade> weightedGrades = Arrays.asList(new WeightedGrade(1.0, 5));
         final TableOfRecords tableOfRecords = new TableOfRecords(weightedGrades);
 
-        final double result = gradeCalculator.calculateMultipleWeighted(tableOfRecords);
+        final double result = tableOfRecords.calculateMultipleWeighted();
 
         Assert.assertEquals(1, result, 0.0);
     }
@@ -33,7 +26,7 @@ public class GradeCalculatorTest {
         final List<WeightedGrade> weightedGrades = Arrays.asList(new WeightedGrade(2.0, 5), new WeightedGrade(3.0, 5));
         final TableOfRecords tableOfRecords = new TableOfRecords(weightedGrades);
 
-        final double result = gradeCalculator.calculateMultipleWeighted(tableOfRecords);
+        final double result = tableOfRecords.calculateMultipleWeighted();
 
         assertEquals(2.5, result, 0.0);
     }
@@ -43,7 +36,7 @@ public class GradeCalculatorTest {
         final List<WeightedGrade> weightedGrades = Arrays.asList(new WeightedGrade(2.0, 5), new WeightedGrade(3.0, 5), new WeightedGrade(5.0, 5));
         final TableOfRecords tableOfRecords = new TableOfRecords(weightedGrades);
 
-        double result = gradeCalculator.calculateMultipleWeighted(tableOfRecords);
+        double result = tableOfRecords.calculateMultipleWeighted();
 
         assertEquals(3.33, result, 0.01);
     }
@@ -53,7 +46,7 @@ public class GradeCalculatorTest {
         final List<WeightedGrade> weightedGrades = Arrays.asList(new WeightedGrade(2.3, 5), new WeightedGrade(1.7, 5));
         final TableOfRecords tableOfRecords = new TableOfRecords(weightedGrades);
 
-        double result = gradeCalculator.calculateMultipleWeighted(tableOfRecords);
+        double result = tableOfRecords.calculateMultipleWeighted();
 
         assertEquals(2.0, result, 0.0);
     }
@@ -63,7 +56,7 @@ public class GradeCalculatorTest {
         final List<WeightedGrade> weightedGrades = Arrays.asList(new WeightedGrade(2.3, 8));
         final TableOfRecords tableOfRecords = new TableOfRecords(weightedGrades);
 
-        double result = gradeCalculator.calculateMultipleWeighted(tableOfRecords);
+        double result = tableOfRecords.calculateMultipleWeighted();
 
         assertEquals(2.3, result, 0.0);
     }
@@ -73,7 +66,7 @@ public class GradeCalculatorTest {
         final List<WeightedGrade> weightedGrades = Arrays.asList(new WeightedGrade(4.0, 8), new WeightedGrade(1.0, 4));
         final TableOfRecords tableOfRecords = new TableOfRecords(weightedGrades);
 
-        double result = gradeCalculator.calculateMultipleWeighted(tableOfRecords);
+        double result = tableOfRecords.calculateMultipleWeighted();
 
         assertEquals(3, result, 0.0);
     }
