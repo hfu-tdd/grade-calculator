@@ -16,4 +16,8 @@ public class WeightedGrade {
     public int getCreditPoints() {
         return creditPoints;
     }
+
+    double getWeightedGrade() {
+        return getGrade() * getCreditPoints();
+    }
 }
