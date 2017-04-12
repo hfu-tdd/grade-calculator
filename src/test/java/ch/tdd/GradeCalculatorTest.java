@@ -14,4 +14,13 @@ public class GradeCalculatorTest {
 
         assertEquals(1, result);
     }
+
+    @Test
+    public void calculateAverage_twoGrades() throws Exception {
+        GradeCalculator gradeCalculator = new GradeCalculator();
+
+        double result = gradeCalculator.calculate(2, 3);
+
+        assertEquals(2.5, result, 0.0);
+    }
 }
