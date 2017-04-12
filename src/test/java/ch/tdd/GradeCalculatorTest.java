@@ -16,28 +16,28 @@ public class GradeCalculatorTest {
 
     @Test
     public void calculateAverage_onlyOneGrade() {
-        final double result = gradeCalculator.calculate(1);
+        final double result = gradeCalculator.calculateMultipleWeighted(new WeightedGrade(1.0, 5));
 
         assertEquals(1, result, 0.0);
     }
 
     @Test
     public void calculateAverage_twoGrades() throws Exception {
-        final double result = gradeCalculator.calculateMultiple(2, 3);
+        final double result = gradeCalculator.calculateMultipleWeighted(new WeightedGrade(2.0, 5), new WeightedGrade(3.0, 5));
 
         assertEquals(2.5, result, 0.0);
     }
 
     @Test
     public void calculcateAverage_threeGrades() throws Exception {
-        double result = gradeCalculator.calculateMultiple(2, 3, 5);
+        double result = gradeCalculator.calculateMultipleWeighted(new WeightedGrade(2.0, 5), new WeightedGrade(3.0, 5), new WeightedGrade(5.0, 5));
 
         assertEquals(3.33, result, 0.01);
     }
 
     @Test
     public void calculateAverage_twoOddGrades() throws Exception {
-        double result = gradeCalculator.calculateMultiple(2.3, 1.7);
+        double result = gradeCalculator.calculateMultipleWeighted(new WeightedGrade(2.3, 5), new WeightedGrade(1.7, 5));
 
         assertEquals(2.0, result, 0.0);
     }
