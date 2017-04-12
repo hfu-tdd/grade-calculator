@@ -41,4 +41,18 @@ public class GradeCalculatorTest {
 
         assertEquals(2.0, result, 0.0);
     }
+
+    @Test
+    public void calculateAverage_weightedGrade() throws Exception {
+        double result = gradeCalculator.calculateWeighted(2.3, 8);
+
+        assertEquals(2.3, result, 0.0);
+    }
+
+    @Test
+    public void calculateAverage_twoWeightedGrades() throws Exception {
+        double result = gradeCalculator.calculateWeighted(4.0, 8, 1.0, 4);
+
+        assertEquals(3, result, 0.0);
+    }
 }
